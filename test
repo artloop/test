@@ -1,0 +1,8 @@
+function FindProxyForURL(url, host) {
+if (isPlainHostName(host) || dnsDomainIs(host, 'googlevideo.com'))
+    return 'PROXY 116.203.197.143:49573';
+if (isPlainHostName(host) || dnsDomainIs(host, '2ip.ru'))
+  return 'PROXY 116.203.197.143:49573; PROXY 65.108.54.7:38209';
+else
+  return 'DIRECT';
+}
